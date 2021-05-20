@@ -1,0 +1,15 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: kustomize
+  namespace: fleet-default
+spec:
+  branch: master
+  insecureSkipTLSVerify: false
+  paths:
+  - /multi-cluster/kustomize
+  repo: https://github.com/polinchw/fleet-examples.git
+  targetNamespace: test2
+  targets:
+  - clusterGroup: bill-group
+type: fleet.cattle.io.gitrepo

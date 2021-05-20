@@ -9,6 +9,7 @@ spec:
   paths:
   - /multi-cluster/helm
   repo: https://github.com/rancher/fleet-examples.git
+  targetNamespace: test1
   targets:
   - clusterGroup: bill-group
 type: fleet.cattle.io.gitrepo

@@ -1,15 +1,15 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: tomcat
-  namespace: fleet-default
+  name: kustomize
+  namespace: fleet-bill
 spec:
   branch: master
   insecureSkipTLSVerify: false
   paths:
-  - /multi-cluster/tomcat
+  - /multi-cluster/kustomize
   repo: https://github.com/polinchw/fleet-examples.git
-  targetNamespace: tomcat
+  targetNamespace: test2
   targets:
   - clusterGroup: bill-group
 type: fleet.cattle.io.gitrepo

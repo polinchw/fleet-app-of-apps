@@ -2,7 +2,7 @@ apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
   name: nginx
-  namespace: fleet-default
+  namespace: fleet-bill
 spec:
   branch: master
   insecureSkipTLSVerify: false
@@ -11,5 +11,5 @@ spec:
   repo: https://github.com/polinchw/fleet-examples.git
   targetNamespace: nginx
   targets:
-  - clusterGroup: bob-group
+  - clusterGroup: bill-group
 type: fleet.cattle.io.gitrepo

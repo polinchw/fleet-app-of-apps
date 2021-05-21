@@ -1,15 +1,15 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: kustomize
-  namespace: fleet-default
+  name: nginx
+  namespace: fleet-bob
 spec:
   branch: master
   insecureSkipTLSVerify: false
   paths:
-  - /multi-cluster/kustomize
+  - /multi-cluster/nginx
   repo: https://github.com/polinchw/fleet-examples.git
-  targetNamespace: test2
+  targetNamespace: nginx
   targets:
-  - clusterGroup: bill-group
+  - clusterGroup: bob-group
 type: fleet.cattle.io.gitrepo
